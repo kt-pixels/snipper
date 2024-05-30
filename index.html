@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Spinner Game</title>
+  </head>
+  <body>
+    <div class="spinner_container">
+      <div class="spinner_heading">
+        <h1>Spinner Game</h1>
+      </div>
+      <div class="select_number">
+        <select id="time">
+          <option value="--SELECT--">--SELECT--</option>
+          <option value="5">5s</option>
+          <option value="10">10s</option>
+          <option value="20">20s</option>
+          <option value="30">30s</option>
+        </select>
+
+        <select id="boxes" onchange="updateWheel()">
+          <option>--SELECT--</option>
+          <!-- <option value="3">3</option>
+          <option value="4">4</option> -->
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+        </select>
+      </div>
+      <div class="textField">
+        <textarea id="textarea" placeholder="Type Here..." oninput="updateText()"></textarea>
+      </div>
+      <div class="spin_container">
+        <div class="btn" onclick="spin()">SPIN</div>
+        <div class="spinner_wheel" id="spinner_wheel">
+          <div class="content_segments" style="--i:1;--clr: pink;"><span></span></div>
+          <div class="content_segments" style="--i:2;--clr: orange;"><span></span></div>
+          <div class="content_segments" style="--i:3;--clr: orangered;"><span></span></div>
+          <div class="content_segments" style="--i:4;--clr: green;"><span></span></div>
+          <div class="content_segments" style="--i:5;--clr: blue;"><span></span></div>
+        </div>
+      </div>
+      <div class="results"></div>
+    </div>
+    <audio id="spinSound" src="spinning-karma-machine-169203.mp3">Play with me</audio> 
+    <script src="script.js"></script>
+  </body>
+</html>
