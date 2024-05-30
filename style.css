@@ -91,9 +91,15 @@ body {
 } */
 
 @media only screen and (max-width: 360px){
+  .spinner_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
     .spin_container {
-        width: 210px;
-        height: 210px;
+        width: 250px;
+        height: 250px;
     }
 
     .spinner_heading{
@@ -129,4 +135,8 @@ body {
         font-size: 10px;
         font-weight: 900;
     }
+
+  .spin_container .spinner_wheel .content_segments > span{
+    font-size: 12px;
+  }
 }
